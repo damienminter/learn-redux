@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { addTodoAction } from "../redux";
+import { addTodoAction, selectTodoAction } from "../redux";
 import { v4 as uuidv4 } from "uuid";
 
 const AddTodo = (props) => {
@@ -12,11 +12,14 @@ const AddTodo = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTodoAction({
+
+    const newTodo = {
       id: uuidv4(),
       name: todo,
       complete: false,
-    });
+    };
+    props.addTodoAction(newTodo);
+    props.selectTodoAction(newTodo);
     setTodo("");
   };
 
@@ -34,4 +37,4 @@ const AddTodo = (props) => {
   );
 };
 
-export default connect(null, { addTodoAction })(AddTodo);
+export default connect(null, { addTodoAction, selectTodoAction })(AddTodo);

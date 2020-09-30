@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #282c34;
 }
 
 .App {
@@ -21,7 +21,7 @@ body {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -44,7 +44,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
-
+  align-items: center;
   margin: auto;
   justify-content: space-evenly;
 }
@@ -52,7 +52,6 @@ body {
 .list-todo {
   background-color: white;
   height: 5vh;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   width: 90%;
   margin: auto;
   padding: 1rem;
@@ -61,16 +60,7 @@ body {
   border-radius: 5px;
 }
 
-.list-todo2 {
-  background-color: rgb(103, 186, 214);
-  height: 5vh;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  margin: auto;
-  padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  border-radius: 5px;
+a {
 }
 
 .red {
@@ -80,7 +70,6 @@ body {
 .active-card {
   background-color: white;
   height: 10vh;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   width: 30%;
   margin: auto;
   padding: 3rem;
