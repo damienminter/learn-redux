@@ -3,7 +3,8 @@ import "./App.css";
 import AddTodo from "./componenets/AddTodo";
 import DisplayTodo from "./componenets/DisplayTodo";
 // import Header from "./componenets/Header";
-import ListTodo from "./componenets/ListTodo";
+// import ListTodo from "./componenets/ListTodo";
+import ListTodo2 from "./componenets/ListTodo2";
 import { connect } from "react-redux";
 
 function App({ todo, todos }) {
@@ -12,7 +13,10 @@ function App({ todo, todos }) {
       {/* <Header /> */}
       <DisplayTodo todo={todo} />
       <AddTodo />
-      <ListTodo todos={todos} todo={todo} />
+      <div className="container">
+        {/* <ListTodo todos={todos} todo={todo} /> */}
+        <ListTodo2 todos={todos} todo={todo} />
+      </div>
     </div>
   );
 }

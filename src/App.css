@@ -41,8 +41,28 @@ body {
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+
+  margin: auto;
+  justify-content: space-evenly;
+}
+
 .list-todo {
   background-color: white;
+  height: 5vh;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.list-todo2 {
+  background-color: rgb(103, 186, 214);
   height: 5vh;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   width: 90%;
