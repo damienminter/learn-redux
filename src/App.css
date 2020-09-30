@@ -1,9 +1,13 @@
+body {
+  background-color: black;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,7 +19,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +39,33 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.list-todo {
+  background-color: white;
+  height: 5vh;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+}
+
+.red {
+  color: red;
+}
+
+.active-card {
+  background-color: white;
+  height: 10vh;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  width: 30%;
+  margin: auto;
+  padding: 3rem;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
 }
