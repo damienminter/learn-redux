@@ -1,9 +1,6 @@
 import React from "react";
-// import { connect } from "react-redux";
 
 export const DisplayTodo = ({ todo }) => {
-  // const { todo } = props;
-  console.log(todo.name);
   return (
     <>
       {todo && (
@@ -15,11 +12,5 @@ export const DisplayTodo = ({ todo }) => {
     </>
   );
 };
-
-// const mapStateToProps = (state) => {
-//   return {
-//     todo: state.todo,
-//   };
-// };
 
 export default DisplayTodo;

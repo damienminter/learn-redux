@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { addTodoAction, selectTodoAction } from "../redux";
+import { addTodoAction, selectTodoAction } from "../redux/actions";
 import { v4 as uuidv4 } from "uuid";
 
 const AddTodo = (props) => {

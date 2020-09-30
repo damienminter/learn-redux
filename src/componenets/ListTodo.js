@@ -1,28 +1,14 @@
 import React from "react";
-import { selectTodoAction } from "../redux";
-import { connect } from "react-redux";
+import ToDoItem from "./ToDoItem";
 
 export const ListTodo = (props) => {
   const { todos } = props;
 
-  const selectTodo = (todo) => {
-    props.selectTodoAction(todo);
-  };
-
   return (
     <div>
-      {todos &&
-        todos.map((todo) => (
-          <li
-            className="list-todo"
-            key={todo.id}
-            onClick={selectTodo.bind(null, todo)}
-          >
-            <span>{todo.name}</span>
-          </li>
-        ))}
+      {todos && todos.map((todo) => <ToDoItem key={todo.id} todo={todo} />)}
     </div>
   );
 };
 
-export default connect(null, { selectTodoAction })(ListTodo);
+export default ListTodo;

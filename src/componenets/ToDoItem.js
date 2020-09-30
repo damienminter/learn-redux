@@ -1,10 +1,8 @@
 import React from "react";
-import { selectTodoAction } from "../redux";
+import { selectTodoAction } from "../redux/actions";
 import { connect } from "react-redux";
 
 export const ToDoItem = (props) => {
-  console.log(props);
-
   const { todo } = props;
 
   const selectTodo = (todo) => {
