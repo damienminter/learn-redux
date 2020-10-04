@@ -4,9 +4,12 @@ import AddTodo from "./componenets/AddTodo";
 import DisplayTodo from "./componenets/DisplayTodo";
 import Header from "./componenets/Header";
 import ListTodo from "./componenets/ListTodo";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
 
-function App({ todo, todos }) {
+function App() {
+  const todos = useSelector((state) => state.todos);
+  const todo = useSelector((state) => state.todo);
+
   return (
     <div className="App">
       <Header />
@@ -19,11 +22,4 @@ function App({ todo, todos }) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    todos: state.todos,
-    todo: state.todo,
-  };
-};
-
-export default connect(mapStateToProps)(App);
+export default App;
