@@ -10,11 +10,13 @@ export default function reducer(state = initialState, action) {
         todos: [action.payload, ...state.todos],
       };
     case DELETE_TODO:
+      console.log(action.payload);
       return {
         ...state,
-        todos: state.todos.filter((todo) => todo !== action.payload),
+        todos: state.todos.filter((todo) => todo.id !== action.payload),
       };
     case TOGGLE_TODO:
+      console.log("reducer fired");
       return {
         ...state,
         todos: state.todos.map((todo) =>

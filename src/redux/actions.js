@@ -14,6 +14,7 @@ export const deleteTodoAction = (todoId) => {
 };
 
 export const toggleTodoAction = (todoId) => {
+  console.log("action fired");
   return {
     type: "TOGGLE_TODO",
     payload: todoId,
