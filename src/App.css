@@ -49,6 +49,25 @@ body {
   justify-content: space-evenly;
 }
 
+.todo-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1.8;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px grey solid;
+  width: 100%;
+  margin: auto;
+}
+
+.todo-footer {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .list-todo {
   background-color: white;
   height: 5vh;
@@ -61,17 +80,71 @@ body {
 }
 
 .red {
-  color: red;
+  color: #61dafb;
 }
 
 .active-card {
   background-color: white;
-  height: 10vh;
-  width: 30%;
+  min-height: 15vh;
+  width: 300px;
+  max-width: 98%;
   margin: auto;
-  padding: 3rem;
-  padding-top: 1rem;
-  margin-top: 2rem;
+  padding: 2rem;
+  padding-top: 20px;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.active-card h2 {
+  margin: 5px 10px;
+}
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.completeBtn {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.complete {
+  text-decoration: line-through;
+}
+
+.add-item {
+  height: 30px;
+  margin-bottom: 1rem;
+}
+
+.add-item input {
+  height: 100%;
+  border-radius: 15px 0px 0 15px;
+  border: #61dafb solid 2px;
+  padding-left: 30px;
+}
+
+.add-item button {
+  cursor: pointer;
+  height: 120%;
+  margin: none;
+  padding-right: 10px;
+  border-radius: 0px 15px 15px 0px;
+  border: #61dafb solid 2px;
+  width: 50px;
+  background-color: #61dafb;
+  color: white;
+  font-weight: bold;
+}
+
+.add-item button:hover {
+  background-color: white;
+  color: #61dafb;
 }
