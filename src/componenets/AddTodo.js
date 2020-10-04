@@ -12,7 +12,7 @@ const AddTodo = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (todo.trim() === "") return;
     const newTodo = {
       id: uuidv4(),
       name: todo,
