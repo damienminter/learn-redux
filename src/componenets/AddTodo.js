@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addTodoAction, selectTodoAction } from "../redux/actions";
 import { v4 as uuidv4 } from "uuid";
 
 const AddTodo = (props) => {
   const [todo, setTodo] = useState("");
+  const dispatchNewTodo = useDispatch();
+  const dispatchSelectTodo = useDispatch();
 
   const handleChange = (e) => {
     setTodo(e.target.value);
@@ -18,8 +20,8 @@ const AddTodo = (props) => {
       name: todo,
       complete: false,
     };
-    props.addTodoAction(newTodo);
-    props.selectTodoAction(newTodo);
+    dispatchNewTodo(addTodoAction(newTodo));
+    dispatchSelectTodo(selectTodoAction(newTodo));
     setTodo("");
   };
 
@@ -40,4 +42,4 @@ const AddTodo = (props) => {
   );
 };
 
-export default connect(null, { addTodoAction, selectTodoAction })(AddTodo);
+export default AddTodo;
