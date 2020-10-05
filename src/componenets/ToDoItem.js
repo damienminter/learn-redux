@@ -4,22 +4,21 @@ import {
   deleteTodoAction,
   toggleTodoAction,
 } from "../redux/actions";
-import { connect } from "react-redux";
+import { useDispatch } from "react-redux";
 
 export const ToDoItem = (props) => {
   const { todo } = props;
 
   const selectTodo = (todo) => {
-    props.selectTodoAction(todo);
+    useDispatch(selectTodoAction(todo));
   };
 
   const deleteTodo = (todoId) => {
-    props.deleteTodoAction(todoId);
+    useDispatch(deleteTodoAction(todoId));
   };
 
   const toggleTodo = (todoId) => {
-    console.log(todoId);
-    props.toggleTodoAction(todoId);
+    useDispatch(toggleTodoAction(todoId));
   };
 
   return (
@@ -49,8 +48,4 @@ export const ToDoItem = (props) => {
   );
 };
 
-export default connect(null, {
-  selectTodoAction,
-  deleteTodoAction,
-  toggleTodoAction,
-})(ToDoItem);
+export default ToDoItem;
