@@ -3,10 +3,9 @@ import { useDispatch } from "react-redux";
 import { addTodoAction, selectTodoAction } from "../redux/actions";
 import { v4 as uuidv4 } from "uuid";
 
-const AddTodo = (props) => {
+const AddTodo = () => {
   const [todo, setTodo] = useState("");
-  const dispatchNewTodo = useDispatch();
-  const dispatchSelectTodo = useDispatch();
+  const dispatchTodo = useDispatch();
 
   const handleChange = (e) => {
     setTodo(e.target.value);
@@ -20,8 +19,8 @@ const AddTodo = (props) => {
       name: todo,
       complete: false,
     };
-    dispatchNewTodo(addTodoAction(newTodo));
-    dispatchSelectTodo(selectTodoAction(newTodo));
+    dispatchTodo(addTodoAction(newTodo));
+    dispatchTodo(selectTodoAction(newTodo));
     setTodo("");
   };
 
