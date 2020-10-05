@@ -8,17 +8,18 @@ import { useDispatch } from "react-redux";
 
 export const ToDoItem = (props) => {
   const { todo } = props;
+  const dispatchTodo = useDispatch();
 
   const selectTodo = (todo) => {
-    useDispatch(selectTodoAction(todo));
+    dispatchTodo(selectTodoAction(todo));
   };
 
   const deleteTodo = (todoId) => {
-    useDispatch(deleteTodoAction(todoId));
+    dispatchTodo(deleteTodoAction(todoId));
   };
 
   const toggleTodo = (todoId) => {
-    useDispatch(toggleTodoAction(todoId));
+    dispatchTodo(toggleTodoAction(todoId));
   };
 
   return (
