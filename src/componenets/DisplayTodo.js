@@ -4,7 +4,6 @@ import { TodoContext } from "../App";
 export const DisplayTodo = () => {
   const context = useContext(TodoContext);
   const todo = context.todo;
-  console.log("Child ", todo);
   return (
     <>
       {todo && (
