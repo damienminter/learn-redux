@@ -1,25 +1,30 @@
-import React from "react";
-import {
-  selectTodoAction,
-  deleteTodoAction,
-  toggleTodoAction,
-} from "../redux/actions";
-import { useDispatch } from "react-redux";
+import React, { useContext } from "react";
+import { TodoContext } from "../App";
+// import {
+//   selectTodoAction,
+//   deleteTodoAction,
+//   toggleTodoAction,
+// } from "../redux/actions";
+// import { useDispatch } from "react-redux";
 
 export const ToDoItem = (props) => {
   const { todo } = props;
-  const dispatchTodo = useDispatch();
+  const context = useContext(TodoContext);
+  // const dispatchTodo = useDispatch();
 
   const selectTodo = (todo) => {
-    dispatchTodo(selectTodoAction(todo));
+    context.todoDispatch({ type: "SELECT_TODO", payload: todo });
+    // dispatchTodo(selectTodoAction(todo));
   };
 
   const deleteTodo = (todoId) => {
-    dispatchTodo(deleteTodoAction(todoId));
+    context.todoDispatch({ type: "DELETE_TODO", payload: todoId });
+    // dispatchTodo(deleteTodoAction(todoId));
   };
 
   const toggleTodo = (todoId) => {
-    dispatchTodo(toggleTodoAction(todoId));
+    context.todoDispatch({ type: "TOGGLE_TODO", payload: todoId });
+    // dispatchTodo(toggleTodoAction(todoId));
   };
 
   return (

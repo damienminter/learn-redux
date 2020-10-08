@@ -3,7 +3,7 @@ import { TodoContext } from "../App";
 
 export const DisplayTodo = () => {
   const context = useContext(TodoContext);
-  const todo = context.todo;
+  const todo = context.state.todo;
   return (
     <>
       {todo && (
