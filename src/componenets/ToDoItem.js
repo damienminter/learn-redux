@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
-// import { TodoContext } from "../App";
 import { TodoContext } from "../context/Context";
-
 import {
   selectTodoAction,
   deleteTodoAction,

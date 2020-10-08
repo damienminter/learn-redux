@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import ToDoItem from "./ToDoItem";
-// import { TodoContext } from "../App";
 import { TodoContext } from "../context/Context";
 
 export const ListTodo = () => {
