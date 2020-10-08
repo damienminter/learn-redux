@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { TodoContext } from "../App";
+// import { TodoContext } from "../App";
+import { TodoContext } from "../context/Context";
 
 const AddTodo = () => {
   const [todo, setTodo] = useState("");
